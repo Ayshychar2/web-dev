@@ -1,0 +1,260 @@
+/* Services Page Specific Styles */
+
+/* Services Hero Section */
+.services-hero {
+    padding: 80px 0;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Main Services Section */
+.main-services {
+    padding: 80px 0;
+    background-color: var(--light-background);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.service-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-background);
+}
+
+.service-card p {
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    margin-bottom: 25px;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-card ul li i {
+    color: var(--success-color);
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.service-card .btn {
+    margin-top: auto;
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.process-steps {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 2px;
+    background-color: var(--primary-color);
+}
+
+.process-step {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 30px;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-background);
+}
+
+.step-content p {
+    color: var(--light-text);
+}
+
+/* Technologies Section */
+.technologies-section {
+    padding: 80px 0;
+    background-color: var(--light-background);
+}
+
+.tech-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.tech-category {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.tech-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--dark-background);
+    text-align: center;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.tech-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.tech-icon span {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .services-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tech-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .process-steps::before {
+        left: 20px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .step-content h3 {
+        font-size: 1.3rem;
+    }
+}

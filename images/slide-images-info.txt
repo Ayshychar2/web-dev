@@ -1,0 +1,25 @@
+For the mouse slide animation, you'll need three high-quality images:
+
+slide1.jpg - Professional Web Development
+- Dark-themed image showing a developer or code on screen
+- Resolution: 1920x1080px minimum
+- Style: Dark with blue accents
+
+slide2.jpg - Modern Design Solutions
+- Image showing responsive design across devices
+- Resolution: 1920x1080px minimum
+- Style: Dark with blue accents
+
+slide3.jpg - Grow Your Business
+- Image showing business growth charts or meeting
+- Resolution: 1920x1080px minimum
+- Style: Dark with blue accents
+
+You can find suitable images on:
+- Unsplash (https://unsplash.com)
+- Pexels (https://pexels.com)
+- Pixabay (https://pixabay.com)
+
+Search terms like "web development dark", "responsive design dark", or "business growth dark" should yield good results.
+
+Remember to optimize the images for web to ensure fast loading times.

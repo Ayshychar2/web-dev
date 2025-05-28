@@ -1,0 +1,21 @@
+This is a placeholder file. You should replace it with actual images.
+
+For a complete website, you'll need the following images:
+1. Logo image
+2. Hero image
+3. Trust badge icons (verify.png, flash.png, rocket.png)
+4. Client/testimonial profile pictures
+5. Star rating image
+6. Guarantee background image
+
+You can find free stock images on websites like:
+- Unsplash (https://unsplash.com)
+- Pexels (https://pexels.com)
+- Pixabay (https://pixabay.com)
+
+For icons, you can use:
+- Font Awesome (already included in the HTML)
+- Flaticon (https://flaticon.com)
+- Icons8 (https://icons8.com)
+
+Remember to optimize your images for web to ensure fast loading times.

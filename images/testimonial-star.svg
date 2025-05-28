@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Testimonial Star</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="testimonialStarGradient">
+            <stop stop-color="#45d6e7" offset="0%"></stop>
+            <stop stop-color="#38cdfa" offset="50%"></stop>
+            <stop stop-color="#ff7e5f" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="starGlow">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <path d="M60,10 L71.8,44.55 L107.55,44.55 L78.78,65.9 L90.9,100.45 L60,79.1 L29.1,100.45 L41.22,65.9 L12.45,44.55 L48.2,44.55 L60,10 Z" fill="url(#testimonialStarGradient)" filter="url(#starGlow)"></path>
+            <path d="M60,10 L71.8,44.55 L107.55,44.55 L78.78,65.9 L90.9,100.45 L60,79.1 L29.1,100.45 L41.22,65.9 L12.45,44.55 L48.2,44.55 L60,10 Z" fill="url(#testimonialStarGradient)"></path>
+        </g>
+    </g>
+</svg>

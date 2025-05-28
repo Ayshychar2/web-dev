@@ -1,0 +1,135 @@
+/* Trust Badges Section Styles */
+.trust-badges {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-badges::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(56, 205, 250, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+}
+
+.trust-badges .section-header {
+    margin-bottom: 60px;
+}
+
+.trust-badges .section-header h2 {
+    color: #fff;
+}
+
+.trust-badges .section-header p {
+    color: #cccccc;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.badge:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: #38cdfa;
+}
+
+.badge img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(56, 205, 250, 0.5));
+}
+
+.badge h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #38cdfa;
+}
+
+.badge p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.clients-counter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.counter-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.counter-item span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #38cdfa;
+    display: block;
+    margin-bottom: 10px;
+    font-family: "gilroy", sans-serif;
+}
+
+.counter-item p {
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .badges-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-badges {
+        padding: 60px 0;
+    }
+    
+    .clients-counter {
+        flex-direction: column;
+    }
+    
+    .counter-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .badges-grid {
+        grid-template-columns: 1fr;
+    }
+}

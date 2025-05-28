@@ -1,0 +1,128 @@
+/* Custom Cursor Effects */
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #38cdfa;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+    transition: all linear 0.1s;
+}
+
+#cursor-blur {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(56, 205, 250, 0.2);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+    pointer-events: none;
+    transition: all linear 0.4s;
+}
+
+/* Interactive elements */
+.interactive-element {
+    cursor: none;
+}
+
+.interactive-element:hover ~ #cursor {
+    scale: 3;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+/* Scroll animations */
+.scroll-text {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    padding: 50px 0;
+    background-color: #121212;
+}
+
+.scroll-text::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-text-inner {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroll-text-inner h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.scroll-text-inner h4:hover {
+    color: #38cdfa;
+    -webkit-text-stroke: 2px #38cdfa;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* 3D Card Hover Effect */
+.card-3d {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card-3d:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+    box-shadow: 0 15px 40px rgba(56, 205, 250, 0.3);
+}
+
+/* Floating animation for elements */
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Hide floating stars */
+.floating-star, .star-decoration {
+    display: none !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #cursor, #cursor-blur {
+        display: none;
+    }
+    
+    .scroll-text-inner h4 {
+        font-size: 60px;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Star</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="starGradient">
+            <stop stop-color="#45d6e7" offset="0%"></stop>
+            <stop stop-color="#38cdfa" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M50,0 L61.8,34.55 L97.55,34.55 L68.78,55.9 L80.9,90.45 L50,69.1 L19.1,90.45 L31.22,55.9 L2.45,34.55 L38.2,34.55 L50,0 Z" fill="url(#starGradient)"></path>
+    </g>
+</svg>
