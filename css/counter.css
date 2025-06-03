@@ -1,0 +1,127 @@
+.counter-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.counter-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.counter-item {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(69, 227, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(69, 227, 255, 0.3);
+}
+
+.counter-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #45E3FF, #38cdfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.counter-number .suffix {
+    font-size: 2rem;
+}
+
+.counter-title {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.counter-image {
+    flex: 1;
+    position: relative;
+}
+
+.counter-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .counter-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .counter-stats {
+        width: 100%;
+    }
+
+    .counter-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .counter-section {
+        padding: 60px 0;
+    }
+
+    .counter-stats {
+        gap: 20px;
+    }
+
+    .counter-item {
+        padding: 20px;
+    }
+
+    .counter-number {
+        font-size: 2.5rem;
+    }
+
+    .counter-number .suffix {
+        font-size: 1.8rem;
+    }
+
+    .counter-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-number {
+        font-size: 2.2rem;
+    }
+
+    .counter-number .suffix {
+        font-size: 1.6rem;
+    }
+} 

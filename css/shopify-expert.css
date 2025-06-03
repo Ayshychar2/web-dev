@@ -1,0 +1,127 @@
+.shopify-expert-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
+    position: relative;
+    overflow: hidden;
+}
+
+.shopify-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.shopify-content {
+    flex: 1;
+}
+
+.shopify-title-wrap {
+    margin-bottom: 30px;
+}
+
+.shopify-title-wrap h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.shopify-title-main {
+    color: #fff;
+}
+
+.shopify-title-highlight {
+    background: linear-gradient(135deg, #45E3FF, #38cdfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.trophy-icon {
+    color: #FFD700;
+    font-size: 2rem;
+}
+
+.shopify-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.shopify-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #45E3FF, #38cdfa);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.shopify-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(69, 227, 255, 0.3);
+}
+
+.shopify-image {
+    flex: 1;
+    position: relative;
+}
+
+.shopify-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .shopify-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .shopify-content,
+    .shopify-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .shopify-expert-section {
+        padding: 60px 0;
+    }
+
+    .shopify-title-wrap h2 {
+        font-size: 2rem;
+    }
+
+    .trophy-icon {
+        font-size: 1.6rem;
+    }
+
+    .shopify-content p {
+        font-size: 1rem;
+    }
+
+    .shopify-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopify-title-wrap h2 {
+        font-size: 1.8rem;
+    }
+
+    .trophy-icon {
+        font-size: 1.4rem;
+    }
+} 

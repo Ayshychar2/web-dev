@@ -1,11 +1,11 @@
-.industries-section {
+.how-we-work-section {
     padding: 80px 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
     position: relative;
     overflow: hidden;
 }
 
-.industries-header {
+.how-we-work-header {
     text-align: center;
     margin-bottom: 60px;
     max-width: 800px;
@@ -13,132 +13,137 @@
     margin-right: auto;
 }
 
-.industries-header h2 {
+.how-we-work-header h2 {
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.industries-header h2 span {
+.how-we-work-header h2 span {
     background: linear-gradient(135deg, #45E3FF, #38cdfa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.industries-header p {
+.how-we-work-header p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 1.1rem;
 }
 
-.industries-grid {
+.steps-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.industry-card {
+.step-box {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     transition: all 0.3s ease;
     border: 1px solid rgba(69, 227, 255, 0.1);
-    cursor: pointer;
 }
 
-.industry-card:hover {
+.step-box:hover {
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(69, 227, 255, 0.3);
 }
 
-.industry-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #45E3FF, #38cdfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
 }
 
-.industry-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
-
-.industry-card:hover .industry-icon img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgba(69, 227, 255, 0.5));
-}
-
-.industry-card h3 {
+.step-box h3 {
     color: #fff;
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
-@media (max-width: 1200px) {
-    .industries-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.step-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-box li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.step-box li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #45E3FF;
 }
 
 @media (max-width: 992px) {
-    .industries-grid {
+    .steps-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .industries-section {
+    .how-we-work-section {
         padding: 60px 0;
     }
 
-    .industries-header h2 {
+    .how-we-work-header h2 {
         font-size: 2rem;
     }
 
-    .industry-card {
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step-box {
         padding: 25px;
     }
 
-    .industry-icon {
-        width: 70px;
-        height: 70px;
+    .step-number {
+        font-size: 2.5rem;
+    }
+
+    .step-box h3 {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .industries-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .industries-header h2 {
+    .how-we-work-header h2 {
         font-size: 1.8rem;
     }
 
-    .industries-header p {
+    .how-we-work-header p {
         font-size: 1rem;
     }
 
-    .industry-card {
+    .step-box {
         padding: 20px;
     }
 
-    .industry-icon {
-        width: 60px;
-        height: 60px;
+    .step-number {
+        font-size: 2rem;
     }
 
-    .industry-card h3 {
+    .step-box h3 {
         font-size: 1.1rem;
     }
 } 
