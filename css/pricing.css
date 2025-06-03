@@ -1,7 +1,7 @@
 /* Pricing Section Styles */
 .pricing {
     padding: 80px 0;
-    background-color: #1a1a1a;
+    background-color: #000000;
 }
 
 .pricing .section-header h2 {
@@ -25,7 +25,7 @@
 }
 
 .pricing-card {
-    background-color: #222222;
+    background-color: #0a0a0a;
     border-radius: 15px;
     padding: 40px 30px;
     width: 100%;

@@ -14,27 +14,38 @@
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cursor-effects.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/counter.css">
+    <link rel="stylesheet" href="css/vision.css">
+    <link rel="stylesheet" href="css/partners.css">
+    <link rel="stylesheet" href="css/shopify-expert.css">
+    <link rel="stylesheet" href="css/industries.css">
+    <link rel="stylesheet" href="css/how-we-work.css">
+    <link rel="stylesheet" href="css/process.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Moranga';
-            src: url('https://fonts.cdnfonts.com/css/moranga') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
+        /* Using Google Fonts instead of cdnfonts for better reliability */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         
-        @font-face {
-            font-family: 'gilroy';
-            src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2');
-            font-weight: normal;
-            font-style: normal;
+        /* Replacing Moranga with a similar Google Font - Playfair Display */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        /* Replacing Gilroy with a similar Google Font - Montserrat */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        
+        /* Font variables are defined in styles.css */
+        
+        /* Smooth scrolling with native browser support */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
-    <main>
+    <main data-scroll-container>
         <!-- Navbar -->
         <header class="navbar">
             <div class="container">
@@ -49,18 +60,19 @@
                         <ul class="nav-list">
                             <li class="logo-item">
                                 <a href="/" class="logo-link">
-                                    <img src="logo.png" alt="Webfilaments Logo" class="logo-img">
+                                    <img src="images/image-0.png" alt="Webfilaments Logo" class="logo-img">
                                  
                                 </a>
                             </li>
-                            <li><a href="#" class="nav-link active">Home</a></li>
-                            <li><a href="#how-it-works" class="nav-link">Services</a></li>
-                            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            <div class="main-nav-items">
+                                <li><a href="index.html" class="nav-link active">Home</a></li>
+                                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            </div>
                             <li class="nav-cta-item">
-                                <a href="#pricing" class="cta-button">
-                                    Get Started
-                                    <i class="fas fa-arrow-right"></i>
+                                <a href="contact.html" class="cta-button">
+                                    Get Started <i class="fas fa-arrow-right"></i>
                                 </a>
                             </li>
                         </ul>
@@ -69,12 +81,18 @@
             </div>
         </header>
 
-    <!-- Mouse Slide Animation Section -->
-    <section class="mouse-slide-container gradient-bg">
-        <div class="panel panel-1 reveal-element">
-            <div class="panel-mask"></div>
-            <div class="panel-content mouse-move" data-move-speed="20">
-                <h2 class="hero-title">Professional Web Development</h2>
+    <!-- Hero Video Section -->
+    <section class="hero-section">
+        <div class="hero-video-background">
+            <video autoplay loop muted playsinline id="heroBackgroundVideo">
+                <source src="herovideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Professional Web Development</h1>
                 <p class="hero-subtitle">Create stunning websites with our expert development services</p>
                 <a href="#pricing" class="btn btn-primary hero-cta glow-effect">Get Started</a>
             </div>
@@ -84,333 +102,403 @@
     <!-- Page 1 / Hero Section -->
     <section id="page1" class="scroll-trigger scroll-up stagger-container">
         <div class="hero-content reveal-element reveal-down">
-            <h1 class="stagger-item hero-title">Professional Web Development</h1>
-            <p class="hero-subtitle stagger-item">Creating stunning websites that drive business growth</p>
+            <h1 class="stagger-item hero-title">Accelerating your digital success through Agile software solutions</h1>
         </div>
-        <div class="video-container stagger-item reveal-element reveal-up">
+        <!-- <div class="video-container stagger-item reveal-element reveal-up">
             <div class="video-wrapper">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/vBM32pnG7C0" title="Web Development Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
-        <!-- <div id="image-div" class="stagger-item float-animation">
-            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" alt="Professional Website Development">
         </div> -->
+        <div class="hero-description stagger-item reveal-element reveal-up">
+            <p>At Webfilaments, we are committed to achieving exceptional outcomes that surpass the expectations of our clients. Our team of skilled professionals is dedicated to creating innovative and tailored solutions that will help your business thrive in the ever-evolving digital landscape. We specialize in website development, mobile app development, E-commerce development and blockchain services that helping our clients harness the power of technology to achieve their goals.</p>
+            <a href="#how-it-works" class="btn btn-primary hero-cta glow-effect">Read More!</a>
+        </div>
     </section>
 
-    <!-- Trust Badges Section -->
-    <section class="trust-badges scroll-trigger">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="reveal-element reveal-down">Why Choose Us</h2>
-                <p class="reveal-element reveal-up">We deliver exceptional value with every project</p>
-            </div>
-            <div class="badges-grid stagger-container">
-                <!-- <div class="badge stagger-item glow-effect card-3d interactive-element">
-                    <img src="https://img.icons8.com/fluency/96/000000/guarantee.png" alt="Guarantee">
-                    <h3>7-day Guarantee</h3>
-                    <p>Full refund if you're not completely satisfied</p>
-                </div> -->
-                <div class="badge stagger-item glow-effect card-3d interactive-element">
-                    <img src="https://img.icons8.com/fluency/96/000000/flash-on.png" alt="Instant Access">
-                    <h3>Instant Access</h3>
-                    <p>Get started immediately after purchase</p>
+   
+    <!-- Clients Section -->
+    <section class="clients-section reveal-element">
+        <div class="clients-section-header reveal-element">
+            <h2>We Made <span>Solutions</span> For Clients</h2>
+            <p>We craft tailored solutions that empower clients to achieve their goals, streamline processes, and drive success effectively and efficiently.</p>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <!-- First set of logos -->
+                <div class="client-logo">
+                    <img src="images/image-1.jpg" alt="Prizmwear">
                 </div>
-                <div class="badge stagger-item glow-effect card-3d interactive-element">
-                    <img src="https://img.icons8.com/fluency/96/000000/rocket.png" alt="Constant Updates">
-                    <h3>Constant Updates</h3>
-                    <p>Regular improvements to keep your site current</p>
+                <div class="client-logo">
+                    <img src="images/image-2.png" alt="Ubon">
                 </div>
-                <div class="badge stagger-item glow-effect card-3d interactive-element">
-                    <img src="https://img.icons8.com/fluency/96/000000/headset.png" alt="24/7 Support">
-                    <h3>24/7 Support</h3>
-                    <p>Our team is always available to help you</p>
+                <div class="client-logo">
+                    <img src="images/image-3.png" alt="Dominion">
                 </div>
-                <div class="badge stagger-item glow-effect card-3d interactive-element">
-                    <img src="https://img.icons8.com/fluency/96/000000/security-checked.png" alt="Enhanced Security">
-                    <h3>Enhanced Security</h3>
-                    <p>Your website is protected against threats</p>
+                <div class="client-logo">
+                    <img src="images/image-4.png" alt="Namhya">
                 </div>
-            </div>
-            <div class="clients-counter stagger-container">
-                <div class="counter-item stagger-item">
-                    <span>1.5L+</span>
-                    <p>Satisfied Clients</p>
+                <!-- Duplicate set for seamless loop -->
+                <div class="client-logo">
+                    <img src="images/image-5.png" alt="Prizmwear">
                 </div>
-                <div class="counter-item stagger-item">
-                    <span>200000+</span>
-                    <p>Projects Completed</p>
+                <div class="client-logo">
+                    <img src="images/image-6.png" alt="Ubon">
                 </div>
-                <div class="counter-item stagger-item">
-                    <span>99%</span>
-                    <p>Client Satisfaction</p>
+                <div class="client-logo">
+                    <img src="images/image-7.png" alt="Dominion">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-8-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-9-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-10-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-11-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-12-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-13-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-14-new.jpg" alt="Namhya">
+                </div>
+                <div class="client-logo">
+                    <img src="images/image-15-new.jpg" alt="Namhya">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How does it work?</h2>
-                <p>Our development process is divided into four key steps designed to build your website efficiently.</p>
+    <!-- How We Work Our Process Section -->
+    <section class="process-section reveal-element">
+        <div class="process-container">
+            <div class="process-header">
+                <h2>HOW WE WORK <span>OUR PROCESS</span></h2>
+                <p>Our streamlined process ensures efficient delivery of high-quality solutions</p>
             </div>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1336&q=80" alt="Choose a Premium Website Theme">
-                    </div>
+            <div class="process-steps">
+                <div class="process-step" data-step="1">
+                    <div class="step-number">01</div>
                     <div class="step-content">
-                        <div class="step-number">STEP 1</div>
-                        <h3>Choose a Premium Website Theme</h3>
-                        <p>Get instant access to 40+ high-converting website themes for just $40 total — no monthly fees. Pick a design you love and launch your website in under a week with our easy setup process.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Includes 40+ Themes & Setup Guide</li>
-                            <li><i class="fas fa-check-circle"></i> Instant Access</li>
-                            <li><i class="fas fa-check-circle"></i> Mobile-Responsive Designs</li>
-                        </ul>
+                        <h3>Client Discovery and Goal Setting</h3>
+                        <p>Get to know your business, industry, and goals through detailed consultation to set clear targets and KPIs</p>
                     </div>
                 </div>
-                
-                <div class="step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Set Up Your Website with Ease">
-                    </div>
+                <div class="process-step" data-step="2">
+                    <div class="step-number">02</div>
                     <div class="step-content">
-                        <div class="step-number">STEP 2</div>
-                        <h3>Set Up Your Website with Ease</h3>
-                        <p>You'll receive step-by-step guidance to launch your website in days — no coding or tech skills needed. Have a question? Our team is ready to assist anytime so you're never stuck.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> No Coding Required</li>
-                            <li><i class="fas fa-check-circle"></i> 24/7 Support Available</li>
-                            <li><i class="fas fa-check-circle"></i> Quick Setup Process</li>
-                        </ul>
+                        <h3>Market Research & Analysis</h3>
+                        <p>Identify trends, conduct keyword research, and analyze target audience behavior & preferences</p>
                     </div>
                 </div>
-                
-                <div class="step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Add Your Own Content">
-                    </div>
+                <div class="process-step" data-step="3">
+                    <div class="step-number">03</div>
                     <div class="step-content">
-                        <div class="step-number">STEP 3</div>
-                        <h3>Add Your Own Content</h3>
-                        <p>Once your theme is installed, you can start adding your own content. We'll provide tips and resources to help you create compelling content that converts visitors into customers.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Content Creation Guides</li>
-                            <li><i class="fas fa-check-circle"></i> SEO Optimization Tips</li>
-                            <li><i class="fas fa-check-circle"></i> Image Optimization Tools</li>
-                        </ul>
+                        <h3>Strategy Development</h3>
+                        <p>Craft compelling strategies and content that drives engagement based on research insights</p>
                     </div>
                 </div>
-                
-                <div class="step">
-                    <div class="step-image">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Grow & Thrive with Ongoing Support">
-                    </div>
+                <div class="process-step" data-step="4">
+                    <div class="step-number">04</div>
                     <div class="step-content">
-                        <div class="step-number">STEP 4</div>
-                        <h3>Grow & Thrive with Ongoing Support</h3>
-                        <p>Keep 100% control of your website and enjoy lifetime access to all theme updates and improvements.</p>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Lifetime Updates</li>
-                            <li><i class="fas fa-check-circle"></i> Technical Support</li>
-                            <li><i class="fas fa-check-circle"></i> Growth Strategy Consultation</li>
-                        </ul>
+                        <h3>Implementation</h3>
+                        <p>Execute strategies with precision, setting up and managing all aspects of development</p>
                     </div>
                 </div>
+                <div class="process-step" data-step="5">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Testing & Optimization</h3>
+                        <p>Rigorous testing and continuous optimization to ensure maximum performance</p>
+                    </div>
+                </div>
+                <div class="process-step" data-step="6">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                        <h3>Scaling & Growth</h3>
+                        <p>Identify opportunities for scaling successful strategies and explore new channels for expansion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section reveal-element">
+        <div class="counter-container">
+            <div class="counter-stats">
+                <div class="counter-item">
+                    <div class="counter-number">
+                        <span class="count" data-target="8">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="counter-title">Years of Experience</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number">
+                        <span class="count" data-target="11">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="counter-title">Countries Served</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number">
+                        <span class="count" data-target="1100">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="counter-title">Projects Completed</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number">
+                        <span class="count" data-target="9">0</span>
+                        <span class="suffix">+</span>
+                    </div>
+                    <div class="counter-title">Industries</div>
+                </div>
+            </div>
+            <div class="counter-image reveal-element">
+                <img src="images/b-1.jpg" alt="Technology Innovation">
+            </div>
+        </div>
+    </section>
+
+    <!-- SVG Line for Timeline Animation -->
+    <div class="svg-line" style="display: none;">
+        <svg width="2" height="100" viewBox="0 0 2 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#4A90E2" stroke-width="2" />
+        </svg>
+    </div>
+    
+    <!-- Vision Section -->
+    <section class="vision-section reveal-element">
+        <div class="vision-container">
+            <div class="vision-content reveal-element">
+                <h2>Our <span>Vision</span></h2>
+                <p>We are a results-driven Digital Marketing Agency based in India, committed to maximizing your Return on Investment (ROI). Our dedicated team of experts combines innovative strategies with data-driven insights to elevate your online presence and drive measurable success. From targeted campaigns to comprehensive analytics, we tailor our services to align with your business goals.</p>
+                <p>With a focus on delivering tangible results, we harness the power of digital platforms to enhance brand visibility, generate leads, and boost conversions. Partner with us for a holistic approach to digital marketing that ensures every rupee spent translates into impactful outcomes for your business.</p>
+                <a href="#" class="vision-btn">VIEW MORE</a>
+            </div>
+            <div class="vision-image reveal-element">
+                <img src="images/b-2.jpg" alt="Our Vision">
+            </div>
+        </div>
+    </section>
+<!-- Partners Section -->
+<section class="partners-section reveal-element">
+    <div class="partners-header reveal-element">
+        <h2>Our <span>Partners</span></h2>
+        <p>Our trusted partners empower us to deliver exceptional solutions, drive innovation, and create lasting value for our clients worldwide.</p>
+    </div>
+    <div class="partners-marquee-container">
+        <div class="partners-marquee">
+            <!-- First set of logos -->
+            <div class="partner-logo">
+                <img src="images/image-18.png" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-19.png" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-20.jpg" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-21.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-22.png" alt="Partner 5">
+            </div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="partner-logo">
+                <img src="images/image-23.png" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-24.png" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-25.png" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-26.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="images/image-27.jpg" alt="Partner 5">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Shopify Expert Section -->
+    <section class="shopify-expert-section reveal-element">
+        <div class="shopify-container">
+            <div class="shopify-content reveal-element">
+                <div class="shopify-title-wrap">
+                    <h2>
+                        <span class="shopify-title-main">We're</span>
+                        <span class="shopify-title-highlight">Shopify Experts</span>
+                        <i class="fas fa-trophy trophy-icon"></i>
+                    </h2>
+                </div>
+                <p>Are you looking to build an exceptional online store that stands out from the competition? Look no further! As a trusted Shopify Partner, we have the expertise and experience to help you build a successful e-commerce business on the Shopify platform.</p>
+                <a href="#portfolio" class="shopify-btn">Our Portfolio</a>
+            </div>
+            <div class="shopify-image">
+                <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Shopify Expert">
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="industries-header">
+            <h2>Industries with Innovative <span>Web Solutions</span></h2>
+            <p>From dynamic e-commerce platforms to custom web applications, we tailor our services to meet the unique needs of each sector.</p>
+        </div>
+        <div class="industries-grid">
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/shopping-bag.png" alt="E-Commerce">
+                </div>
+                <h3>E-Commerce</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/hospital.png" alt="Healthcare">
+                </div>
+                <h3>Healthcare</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/home.png" alt="Real Estate">
+                </div>
+                <h3>Real Estate</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/restaurant.png" alt="Food & Grocery">
+                </div>
+                <h3>Food & Grocery</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/car-service.png" alt="E-Automotive">
+                </div>
+                <h3>E-Automotive</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/crane.png" alt="Construction">
+                </div>
+                <h3>Construction</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/school.png" alt="Education">
+                </div>
+                <h3>Education</h3>
+            </div>
+            <div class="industry-card">
+                <div class="industry-icon">
+                    <img src="https://img.icons8.com/fluency/96/000000/money-bag.png" alt="Finance">
+                </div>
+                <h3>Finance</h3>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
-        
         <div class="container">
             <div class="section-header">
-                <h2 class="reveal-element reveal-down">What our clients have to say</h2>
+                <h2>What our clients have to say</h2>
             </div>
             
-            <div class="testimonials-grid stagger-container">
-                <div class="testimonial stagger-item card-3d interactive-element">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>"Best Website Investment"</h3>
+                        <p>"I tried 3 free themes before buying this, and it blew the rest out of the water. Navigation, speed, responsiveness – 10/10."</p>
+                        <div class="client">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client">
+                            <div>
+                                <h4>Ayesha Malik</h4>
+                                <p>Marketing Head @newdaily</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3>"Best Website Investment"</h3>
-                    <p>"I tried 3 free themes before buying this, and it blew the rest out of the water. Navigation, speed, responsiveness – 10/10."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client">
-                        <div>
-                            <h4>Ayesha Malik</h4>
-                            <p>Marketing Head @newdaily</p>
+                    
+                    <div class="testimonial">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>"Mobile Optimized Perfectly"</h3>
+                        <p>"Over 70% of my traffic is mobile. This theme looks stunning and loads blazing fast across all devices."</p>
+                        <div class="client">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                            <div>
+                                <h4>Tarun Mehta</h4>
+                                <p>D2C Brand Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>"Instant Brand Upgrade"</h3>
+                        <p>"My brand felt basic until I used this theme. It now looks premium and on par with top websites."</p>
+                        <div class="client">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Client">
+                            <div>
+                                <h4>Nikita Desai</h4>
+                                <p>Co-founder @omora</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial stagger-item card-3d interactive-element">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>"Mobile Optimized Perfectly"</h3>
-                    <p>"Over 70% of my traffic is mobile. This theme looks stunning and loads blazing fast across all devices."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                        <div>
-                            <h4>Tarun Mehta</h4>
-                            <p>D2C Brand Owner</p>
-                        </div>
-                    </div>
+
+                <div class="slider-nav">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>"Instant Brand Upgrade"</h3>
-                    <p>"My brand felt basic until I used this theme. It now looks premium and on par with top websites."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Client">
-                        <div>
-                            <h4>Nikita Desai</h4>
-                            <p>Co-founder @omora</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>"Top Support Team!"</h3>
-                    <p>"I had a question about customizing the banner and got a helpful reply in under 12 hours. That's rare!"</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client">
-                        <div>
-                            <h4>Harsh Thakur</h4>
-                            <p>Entrepreneur</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>"Sales Doubled After Redesign"</h3>
-                    <p>"Since launching with WebDevelopers, my daily leads doubled. Clean layout, trust signals, and fast load – a winning combo!"</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Client">
-                        <div>
-                            <h4>Preeti Agarwal</h4>
-                            <p>Founder @whiteswan</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>"The Design Is Beautiful"</h3>
-                    <p>"Incredible experience! The website is beautifully designed, and leads are rolling in. I made significant progress last week and can't wait to see more growth."</p>
-                    <div class="client">
-                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Client">
-                        <div>
-                            <h4>Vikrant Lodha</h4>
-                            <p>CEO @resitant</p>
-                        </div>
-                    </div>
+
+                <div class="slider-dots">
+                    <button class="dot active" aria-label="Go to slide 1"></button>
+                    <button class="dot" aria-label="Go to slide 2"></button>
+                    <button class="dot" aria-label="Go to slide 3"></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our pricing plan</h2>
-            </div>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3>Basic Package</h3>
-                    <div class="price">$499</div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Premium Website Theme</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive Design</li>
-                        <li><i class="fas fa-check"></i> 5 Pages Setup</li>
-                        <li><i class="fas fa-check"></i> Contact Form</li>
-                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
-                        <li><i class="fas fa-check"></i> 30 Days Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary interactive-element">Get Started</a>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="popular">Most Popular</div>
-                    <h3>Professional Package</h3>
-                    <div class="price">$999</div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Premium Website Theme</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive Design</li>
-                        <li><i class="fas fa-check"></i> 10 Pages Setup</li>
-                        <li><i class="fas fa-check"></i> Advanced Contact Forms</li>
-                        <li><i class="fas fa-check"></i> Complete SEO Setup</li>
-                        <li><i class="fas fa-check"></i> Social Media Integration</li>
-                        <li><i class="fas fa-check"></i> Google Analytics Setup</li>
-                        <li><i class="fas fa-check"></i> 60 Days Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary interactive-element">Get Started</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Enterprise Package</h3>
-                    <div class="price">$1999</div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Custom Website Design</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive Design</li>
-                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
-                        <li><i class="fas fa-check"></i> Advanced Functionality</li>
-                        <li><i class="fas fa-check"></i> E-commerce Integration</li>
-                        <li><i class="fas fa-check"></i> Advanced SEO Setup</li>
-                        <li><i class="fas fa-check"></i> Social Media Integration</li>
-                        <li><i class="fas fa-check"></i> Google Analytics & Tag Manager</li>
-                        <li><i class="fas fa-check"></i> 90 Days Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary interactive-element">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq">
+    <section id="faq" class="faq reveal-element">
         <div class="container">
             <div class="section-header">
                 <h2>Maybe we have an answer</h2>
@@ -470,26 +558,11 @@
         </div>
     </section>
 
-    <!-- Guarantee Section -->
-    <section class="guarantee">
-        <div class="container">
-            <div class="guarantee-content">
-                <h2>Your Success, Guaranteed.</h2>
-                <p>With WebDevelopers, your satisfaction is our priority. If you're not completely satisfied with your purchase within 7 days, we'll refund your investment no questions asked.</p>
-                <div class="clients-badge">
-                    <span>2k+</span>
-                    <p>Satisfied Clients</p>
-                </div>
-                <div class="join-badge">
-                    <img src="images/star.png" alt="Star">
-                    <p>Join 3000+ Brands</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+   
 
     <!-- Scrolling Text Section -->
-    <section class="scroll-text">
+    <section class="scroll-text" data-scroll-section>
         <div class="scroll-text-inner">
             <h4 class="interactive-element">PROFESSIONAL WEBSITES</h4>
             <h4 class="interactive-element">STUNNING DESIGNS</h4>
@@ -500,10 +573,10 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" data-scroll-section>
         <div class="container">
-            <h2>Ready to launch your professional website?</h2>
-            <a href="#pricing" class="btn btn-primary interactive-element">Get Started Today</a>
+            <h2 data-scroll data-scroll-speed="1">Ready to launch your professional website?</h2>
+            <a href="#pricing" class="btn btn-primary interactive-element" data-scroll data-scroll-speed="1.5">Get Started Today</a>
         </div>
     </section>
     
@@ -513,51 +586,121 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>WEBDEVELOPERS</h2>
-                    <p>Professional web development services for businesses of all sizes.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#how-it-works">Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> info@webdevelopers.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>WebFilaments</h2>
+                <p>Creating stunning digital experiences through expert web development services. We turn your vision into reality with cutting-edge technology and creative solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 WebDevelopers. All rights reserved.</p>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Web Street, Digital City, 12345</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@webfilaments.com</p>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WebFilaments. All rights reserved.</p>
+        </div>
     </footer>
-
+    </main>
+    
     <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <!-- Load scroll-reveal.js first to ensure it applies to all elements -->
+    
+    <!-- Load your scripts -->
+    <script src="js/smooth-scroll.js"></script>
     <script src="js/hero-fix.js"></script>
     <script src="js/scroll-reveal.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/cursor-effects.js"></script>
     <script src="js/mouse-effects.js"></script>
     <script src="js/script.js"></script>
-    </main>
+    <script src="js/slider.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/timeline-animations.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/process-animation.js"></script>
+    
+    <!-- Ensure all sections are visible -->
+    <script>
+        // Additional script to ensure all sections are visible
+        window.addEventListener('load', function() {
+            // Make sure all sections are visible
+            const allSections = document.querySelectorAll('section');
+            allSections.forEach(section => {
+                section.style.display = 'block';
+                section.style.visibility = 'visible';
+                section.style.opacity = '1';
+                
+                // Add reveal classes
+                section.classList.add('reveal');
+                section.classList.add('visible');
+                section.classList.add('revealed');
+            });
+            console.log('Made visible ' + allSections.length + ' sections');
+            
+            // Special handling for hero sections
+            const heroSection = document.getElementById('page1');
+            const sliderSection = document.querySelector('.mouse-slide-container');
+            
+            if (heroSection) {
+                heroSection.style.display = 'block';
+                heroSection.style.visibility = 'visible';
+                heroSection.style.opacity = '1';
+                
+                // Make all hero elements visible
+                const heroElements = heroSection.querySelectorAll('*');
+                heroElements.forEach(el => {
+                    el.style.visibility = 'visible';
+                    el.style.opacity = '1';
+                    el.classList.add('reveal');
+                    el.classList.add('visible');
+                });
+                console.log('Hero section made visible');
+            }
+            
+            if (sliderSection) {
+                sliderSection.style.display = 'block';
+                sliderSection.style.visibility = 'visible';
+                sliderSection.style.opacity = '1';
+                console.log('Slider section made visible');
+            }
+            
+            // Make sure the FAQ section is visible
+            const faqSection = document.getElementById('faq');
+            if (faqSection) {
+                faqSection.style.display = 'block';
+                faqSection.style.visibility = 'visible';
+                faqSection.style.opacity = '1';
+                console.log('FAQ section made visible on window load');
+                
+                // Also make all FAQ items visible
+                const faqItems = document.querySelectorAll('.faq-item');
+                faqItems.forEach(item => {
+                    item.style.display = 'block';
+                    item.style.visibility = 'visible';
+                    item.style.opacity = '1';
+                });
+                console.log('Found and made visible ' + faqItems.length + ' FAQ items');
+            }
+        });
+    </script>
 </body>
 </html>

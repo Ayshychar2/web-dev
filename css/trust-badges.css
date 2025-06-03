@@ -99,7 +99,7 @@
     color: #38cdfa;
     display: block;
     margin-bottom: 10px;
-    font-family: "gilroy", sans-serif;
+    font-family: var(--gilroy-font);
 }
 
 .counter-item p {

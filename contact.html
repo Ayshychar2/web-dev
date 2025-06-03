@@ -12,27 +12,56 @@
     <link rel="stylesheet" href="css/cursor-effects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <main data-scroll-container>
+    <!-- Navbar -->
+    <header class="navbar">
         <div class="container">
-            <div class="logo">
-                <h1><a href="index.html">WEBDEVELOPERS</a></h1>
+            <div class="navbar-content">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="logo-item">
+                            <a href="/" class="logo-link">
+                                <img src="images/image-0.png" alt="Webfilaments Logo" class="logo-img">
+                             
+                            </a>
+                        </li>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        
+                        <li><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                       
+                        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                        <li class="nav-cta-item">
+                            <a href="contact.html" class="cta-button">
+                                Get Started <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#how-it-works">Services</a></li>
-                    <li><a href="index.html#testimonials">Testimonials</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="index.html#faq">FAQ</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
+    <!-- SVG Line for Timeline Animation -->
+    <div class="svg-line" style="display: none;">
+        <svg width="2" height="100" viewBox="0 0 2 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#4A90E2" stroke-width="2" />
+        </svg>
+    </div>
+    
     <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="container">
@@ -173,6 +202,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <!-- Cursor Elements -->
     <div id="cursor"></div>
@@ -215,5 +245,17 @@
             `;
         });
     </script>
+    
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Load your scripts -->
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/cursor-effects.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 </html>

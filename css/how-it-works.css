@@ -1,7 +1,7 @@
 /* How It Works Section Styles */
 .how-it-works {
     padding: 100px 0;
-    background-color: #0a0a0a;
+    background-color: #000000;
     position: relative;
     overflow: hidden;
 }
@@ -99,7 +99,7 @@
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 15px;
-    font-family: "gilroy", sans-serif;
+    font-family: var(--gilroy-font);
     letter-spacing: 1px;
     box-shadow: 0 5px 15px rgba(56, 205, 250, 0.3);
 }

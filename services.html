@@ -8,24 +8,17 @@
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Moranga';
-            src: url('https://fonts.cdnfonts.com/css/moranga') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'gilroy';
-            src: url('https://fonts.cdnfonts.com/css/gilroy-bold') format('woff2');
-            font-weight: normal;
-            font-style: normal;
+        /* Using Google Fonts instead of cdnfonts for better reliability */
+        html {
+            scroll-behavior: auto;
         }
     </style>
 </head>
 <body>
-    <main>
+    <main data-scroll-container>
         <!-- Navbar -->
         <nav>
             <a href="/">WEBDEVELOPERS</a>
@@ -45,6 +38,13 @@
             </button>
         </nav>
 
+    <!-- SVG Line for Timeline Animation -->
+    <div class="svg-line" style="display: none;">
+        <svg width="2" height="100" viewBox="0 0 2 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1" y1="0" x2="1" y2="100" stroke="#4A90E2" stroke-width="2" />
+        </svg>
+    </div>
+    
     <!-- Services Hero Section -->
     <section class="services-hero">
         <div class="container">
@@ -339,6 +339,12 @@
         </div>
     </footer>
 
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Load your scripts -->
+    <script src="js/smooth-scroll.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
